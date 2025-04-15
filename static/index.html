@@ -1,16 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Форма выбора питомца</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<main>
-    <h1>Найди себе друга!</h1>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+      <!--Форму размещай тут-->
+      <form action="/pets/orders" method="POST">
+        <label for="petType">Выбери живое существо</label>
+        <select name="petType" id="petType">
+          <option value="cat">Бегемотичек</option>
+          <option value="tiger">Котик</option>
+          <option value="">Слоник</option>
+          <option value="dog">DeepSeek</option>
+        </select>
 
-</main>
-</body>
+        <label for="gender">
+          <input type="radio" name="gender" id="gender" value="boy" /> Мужчина
+        </label>
+        <label for="gender">
+          <input type="radio" name="gender" id="gender" value="girl" />
+          Женщина
+        </label>
+        <label for="gender">
+          <input type="radio" name="gender" id="gender" value="none" checked />
+          Мужественная Женщина
+        </label>
+
+        <label for="eyeColor">
+          <input
+            type="text"
+            name="eyeColor"
+            placeholder="твой цвет глазиков"
+            value="#ffff"
+          />
+        </label>
+
+        <label style="display: flex; flex-direction: column" for="tailLength">
+          Длина твоей хвостовки
+          <input
+            type="range"
+            name="tailLength"
+            id="tailLength"
+            min="7"
+            max="120"
+          />
+        </label>
+
+        <label for="name">
+          <textarea
+            name="name"
+            id=""
+            placeholder="Имечко"
+            value="ИМЯ"
+          ></textarea>
+        </label>
+
+        <label style="display: flex; flex-direction: column" for="dateOfBirth">
+          Когда ты родился???
+          <input type="date" name="dateOfBirth" id="dateOfBirth" />
+        </label>
+
+        <label style="display: flex; flex-direction: column" for="email">
+          Твой Email
+          <input type="email" name="email" id="email" />
+        </label>
+
+        <label style="display: flex; flex-direction: column" for="phone">
+          Твой Фоун
+          <input type="tel" name="phone" id="phone" />
+        </label>
+
+        <label>
+          <input type="checkbox" name="rules" value="true" required checked />
+          NO RULES!!!!
+        </label>
+
+        <button type="submit">РИЧАРД, ТЫ ЖИВОТНОЕ!</button>
+      </form>
+    </main>
+  </body>
 </html>
